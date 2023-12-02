@@ -210,16 +210,6 @@ var baseLayers = [new ol.layer.Tile({
                         title: 'No base layer'
                     }),new ol.layer.Tile({
     type: 'base',
-    title: 'ESRI world terrain',
-    source: new ol.source.XYZ({
-        attributions: [new ol.Attribution({ html:['Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme, and NPS']})],
-        url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}'
-    }),
-    projection: 'EPSG:3857'
-})
-
-,new ol.layer.Tile({
-    type: 'base',
     title: 'ESRI world topo map',
     source: new ol.source.XYZ({
         attributions: [new ol.Attribution({ html:['Tiles &copy; <a href="http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer">ArcGIS</a>']})],
@@ -304,14 +294,6 @@ var overlayLayers = [new ol.layer.Tile({
 	source: new ol.source.XYZ({
 		url: 'http://s.tile.openweathermap.org/map/pressure_cntr/{z}/{x}/{y}.png',
 		attributions: [new ol.Attribution({html:['Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>']})],
-	}),
-    projection: 'EPSG:3857'
-})
-,new ol.layer.Tile({
-	type: 'base-overlay',
-	title: 'Hydda roads and labels',
-	source: new ol.source.XYZ({
-		url: 'http://s.tile.openstreetmap.se/hydda/roads_and_labels/{z}/{x}/{y}.png'
 	}),
     projection: 'EPSG:3857'
 })
@@ -449,11 +431,11 @@ damage_sites_gazagov_22311_geojson_callback = function(geojson) {
 
 lyr_gazastrip_municipalboundaries.setVisible(true);
 lyr_gazastrip_neighbourhoods_points.setVisible(true);
-lyr_damage_sites_deiralbalahgov_223121.setVisible(true);
-lyr_damage_sites_agriculture_northgazagov_223115.setVisible(true);
-lyr_damage_sites_gazagov_223115.setVisible(true);
-lyr_damage_sites_northgazagov_223115.setVisible(true);
-lyr_damage_sites_gazagov_22311.setVisible(true);for (var i=0;i<baseLayers.length;i++){baseLayers[i].setVisible(false);}baseLayers[1].setVisible(true);
+lyr_damage_sites_deiralbalahgov_223121.setVisible(false);
+lyr_damage_sites_agriculture_northgazagov_223115.setVisible(false);
+lyr_damage_sites_gazagov_223115.setVisible(false);
+lyr_damage_sites_northgazagov_223115.setVisible(false);
+lyr_damage_sites_gazagov_22311.setVisible(false);for (var i=0;i<baseLayers.length;i++){baseLayers[i].setVisible(false);}baseLayers[1].setVisible(true);
 var layersList = [lyr_gazastrip_municipalboundaries,lyr_gazastrip_neighbourhoods_points,lyr_damage_sites_deiralbalahgov_223121,lyr_damage_sites_agriculture_northgazagov_223115,lyr_damage_sites_gazagov_223115,lyr_damage_sites_northgazagov_223115,lyr_damage_sites_gazagov_22311];layersList.unshift(baseLayersGroup);layersList.push(overlaysGroup);
 var printLayouts = [];
 var legendData = {"GazaStrip_MunicipalBoundaries20231201212002336": [{"href": "0_0.png", "title": ""}], "Damage_Sites_DeirAlBalahGov_2023102120231201211508170": [{"href": "2_0.png", "title": ""}], "Damage_Sites_NorthGazaGov_2023101520231201211508122": [{"href": "5_0.png", "title": ""}], "Damage_Sites_GazaGov_2023101020231201211508106": [{"href": "6_0.png", "title": ""}], "GazaStrip_Neighbourhoods_points20231201211440904": [{"href": "1_0.png", "title": ""}], "Damage_Sites_Agriculture_NorthGazaGov_2023101520231201211508154": [{"href": "3_0.png", "title": ""}], "Damage_Sites_GazaGov_2023101520231201211508138": [{"href": "4_0.png", "title": ""}]};
