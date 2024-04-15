@@ -1,0 +1,16 @@
+{
+    "catalog": [
+        {
+            "name": "Data_on_displaced_persons_in_UNRWA_shelters_by_governorate.csv",
+            "type": "csv",
+            "url": "data/Data_on_displaced_persons_in_UNRWA_shelters_by_governorate.csv",
+        }
+
+    ],
+	    "homeCamera": {
+    "north": 31.2201289,
+    "east": 35.5739235,
+    "south": 32.5521479,
+    "west": 34.0689732,
+  },
+}
